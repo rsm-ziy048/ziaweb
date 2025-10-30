@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <meta name="description" content="Interactive Web Page with Buttons" />
     <meta name="theme-color" content="#000000" />
-    <title>My WebApp</title>
+    <title>My Interactive WebApp</title>
     <link rel="icon" href="favicon.ico" />
     <link
       rel="stylesheet"
@@ -13,7 +13,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- ✅ Start VWO Async SmartCode -->
     <script
       type="text/javascript"
@@ -93,12 +93,40 @@
         margin: 2em;
         background-color: #f5f5f5;
         color: #333;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+      }
+
+      #btn1 {
+        background-color: #007bff;
+        color: white;
+      }
+
+      #btn2 {
+        background-color: #28a745;
+        color: white;
+      }
+
+      button:hover {
+        opacity: 0.9;
       }
     </style>
   </head>
 
   <body>
-    <h1>Hello, welcome to my WebApp!</h1>
-    <p>This page is structured similarly to a create-react-app index.html file.</p>
+    <h1>Welcome to My Interactive WebApp!</h1>
+    <p>Click one of the buttons below:</p>
+
+    <button id="btn1" onclick="alert('You clicked Button 1!')">Button 1</button>
+    <button id="btn2" onclick="alert('You clicked Button 2!')">Button 2</button>
   </body>
 </html>
