@@ -2,39 +2,91 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My WebApp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Web site created using create-react-app" />
+    <meta name="theme-color" content="#000000" />
+    <title>My WebApp</title>
     <link rel="icon" href="favicon.ico" />
-
-    <!-- Start VWO Async SmartCode -->
-    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
-    <script type="text/javascript" id="vwoCode">
-      window._vwo_code = window._vwo_code || (function(){
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- ✅ Start VWO Async SmartCode -->
+    <script
+      type="text/javascript"
+      id="vwoCode"
+      referrerpolicy="no-referrer-when-downgrade"
+    >
+      window._vwo_code = window._vwo_code || (function () {
         var account_id = 1160219,
             settings_tolerance = 2000,
             library_tolerance = 2500,
             use_existing_jquery = false,
-            version = 2.2,
+            is_spa = 1,
             hide_element = 'body',
-            hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;',
-            f = document.createElement('script'),
-            a = document.getElementsByTagName('head')[0];
-        f.src = 'https://dev.visualwebsiteoptimizer.com/lib/1160219.js';
-        f.type = 'text/javascript';
-        f.async = true;
-        a.appendChild(f);
-        return {use_existing_jquery: use_existing_jquery};
-      }());
-    </script>
-    <!-- End VWO Async SmartCode -->
+            _vwo_code = {},
+            f = false;
+        _vwo_code.use_existing_jquery = function () {
+          return use_existing_jquery;
+        };
+        _vwo_code.library_tolerance = function () {
+          return library_tolerance;
+        };
+        _vwo_code.set_settings_tolerance = function (t) {
+          settings_tolerance = t;
+        };
+        _vwo_code.settings_tolerance = function () {
+          return settings_tolerance;
+        };
+        _vwo_code.set_is_spa = function (t) {
+          is_spa = t;
+        };
+        _vwo_code.is_spa = function () {
+          return is_spa;
+        };
+        _vwo_code.set_hide_element = function (t) {
+          hide_element = t;
+        };
+        _vwo_code.get_hide_element = function () {
+          return hide_element;
+        };
 
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="apple-touch-icon" href="logo192.png" />
+        function d() {
+          var t = document,
+              e = t.createElement('style'),
+              n = hide_element + ' { opacity: 0 !important; background: none !important; }',
+              i = t.getElementsByTagName('head')[0];
+          e.setAttribute('id', '_vis_opt_path_hides');
+          e.setAttribute('type', 'text/css');
+          if (e.styleSheet) e.styleSheet.cssText = n;
+          else e.appendChild(t.createTextNode(n));
+          i.appendChild(e);
+        }
+
+        function l() {
+          if (f) return;
+          f = true;
+          var t = document.getElementById('_vis_opt_path_hides');
+          if (t) t.parentNode.removeChild(t);
+        }
+
+        _vwo_code.init = function () {
+          d();
+          return {
+            finish: l,
+            finished: function () {
+              return f;
+            },
+          };
+        };
+        return _vwo_code;
+      })();
+    </script>
+    <!-- ✅ End VWO SmartCode -->
+
     <style>
       body {
         font-family: 'Inter', sans-serif;
