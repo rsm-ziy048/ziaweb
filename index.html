@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="favicon.ico" />
+    <meta charset="UTF-8" />
+    <title>My WebApp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-    />
-    <link rel="apple-touch-icon" href="logo192.png" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script type="text/javascript" id="vwoCode">
+      window._vwo_code = window._vwo_code || (function(){
+        var account_id = 1160219,
+            settings_tolerance = 2000,
+            library_tolerance = 2500,
+            use_existing_jquery = false,
+            version = 2.2,
+            hide_element = 'body',
+            hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;',
+            f = document.createElement('script'),
+            a = document.getElementsByTagName('head')[0];
+        f.src = 'https://dev.visualwebsiteoptimizer.com/lib/1160219.js';
+        f.type = 'text/javascript';
+        f.async = true;
+        a.appendChild(f);
+        return {use_existing_jquery: use_existing_jquery};
+      }());
+    </script>
+    <!-- End VWO Async SmartCode -->
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>My WebApp</title>
+    <link rel="apple-touch-icon" href="logo192.png" />
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -26,9 +44,9 @@
       }
     </style>
   </head>
+
   <body>
     <h1>Hello, welcome to my WebApp!</h1>
     <p>This page is structured similarly to a create-react-app index.html file.</p>
   </body>
 </html>
-
